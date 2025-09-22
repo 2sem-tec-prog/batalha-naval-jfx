@@ -2,10 +2,16 @@ package com.example.batalhanavaljfx
 import javafx.fxml.FXML
 import javafx.scene.control.Button
 import javafx.scene.layout.GridPane
+import kotlin.math.roundToInt
 
 class JogoController {
     private var tamanho: Int = 0
     private lateinit var dificuldade: String
+    private var tentativas = (tamanho*1.5).roundToInt()
+
+    private var jogadas: Int = 0
+    private var acertos: Int = 0
+    private var soma: Int = 0
 
     lateinit var tabuleiro: Array<Array<Char>>
 

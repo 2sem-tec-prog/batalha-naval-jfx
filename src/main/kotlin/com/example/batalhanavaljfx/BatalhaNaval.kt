@@ -80,5 +80,27 @@ fun criarTabuleiro(tamanho: Int, dificuldade: String): Array<Array<Char>>{
     return tabuleiro
 }
 
+fun distanciaMaisProxima(tabuleiro: Array<Array<Char>>, x: Int, y: Int): Int? {
+    val opcoes = charArrayOf('P','p','C','c','R', 'r')
 
+    for (dist in 1..3) {
+        for (dx in -dist..dist) {
+            for (dy in -dist..dist) {
+                if (dx == 0 && dy == 0) continue
+
+                val novoX = x + dx
+                val novoY = y + dy
+
+
+                if (novoX in tabuleiro.indices && novoY in tabuleiro[novoX].indices) {
+                    val celula = tabuleiro[novoX][novoY]
+                    if (celula in opcoes) {
+                        return dist
+                    }
+                }
+            }
+        }
+    }
+    return null
+}
 
