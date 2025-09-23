@@ -12,17 +12,17 @@
                         <Font name="Impact" size="39.0" />
                     </font>
                 </Text>
-                <Text layoutX="30.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pontuação: " wrappingWidth="139.13671875">
+                <Text layoutX="30.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="pontuacaoLabel" text="Pontuação: 0" wrappingWidth="139.13671875">
                     <font>
                         <Font name="Impact" size="17.0" />
                     </font>
                 </Text>
-                <Text layoutX="30.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acertos:" wrappingWidth="139.13671875">
+                <Text layoutX="30.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="acertosLabel" text="Acertos: 0" wrappingWidth="139.13671875">
                     <font>
                         <Font name="Impact" size="17.0" />
                     </font>
                 </Text>
-                <Text layoutX="30.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tentativas:" wrappingWidth="139.13671875">
+                <Text layoutX="30.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="tentativasLabel" text="Tentativas:" wrappingWidth="139.13671875">
                     <font>
                         <Font name="Impact" size="17.0" />
                     </font>
