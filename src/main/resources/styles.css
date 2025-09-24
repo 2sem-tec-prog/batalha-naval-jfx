@@ -1,0 +1,44 @@
+.root {
+    -fx-font-family: "Arial";
+}
+
+/* header */
+.header-pane {
+    -fx-background-color: linear-gradient(#b0c4de, #778899);
+    -fx-border-color: black;
+    -fx-padding: 8;
+}
+
+/* botões das células */
+.cell-button {
+    -fx-background-color: linear-gradient(#e0ffff, #f0f8ff);
+    -fx-border-color: #333;
+    -fx-border-width: 1;
+}
+
+/* acerto (vermelho) */
+.cell-hit {
+    -fx-background-color: linear-gradient(#ffcccc, #ff9999);
+    -fx-border-color: #aa0000;
+    -fx-font-weight: bold;
+    -fx-text-fill: #660000;
+}
+
+/* navio restante (azul) */
+.cell-ship {
+    -fx-background-color: linear-gradient(#cce6ff, #99ccff);
+    -fx-border-color: #0066cc;
+    -fx-font-weight: bold;
+}
+
+/* erro (verde) */
+.cell-miss {
+    -fx-background-color: linear-gradient(#ccffcc, #99ff99);
+    -fx-border-color: #009900;
+    -fx-font-weight: bold;
+}
+
+/* tamanho de fonte dos textos internos das células */
+.button {
+    -fx-font-size: 12px;
+}
