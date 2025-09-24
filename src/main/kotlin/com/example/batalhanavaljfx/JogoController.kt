@@ -8,6 +8,7 @@ import javafx.scene.layout.RowConstraints
 import javafx.scene.text.Text
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
+import kotlin.math.roundToInt
 import kotlin.random.Random
 
 class JogoController {
@@ -48,7 +49,7 @@ class JogoController {
 
     fun receberDados(tamanho: Int, dificuldade: String) {
         this.tamanho = tamanho
-        this.tentativasMax = TENTATIVAS_PADRAO
+        this.tentativasMax = (tamanho * 1.5).roundToInt()
         resetEstado()
         tabuleiro = criarTabuleiro(tamanho, dificuldade)
         atualizarLabels()
