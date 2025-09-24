@@ -17,7 +17,7 @@ class MenuController {
     private lateinit var tamanho: ComboBox<Int>
 
     @FXML
-    fun initialize(){
+    fun initialize() {
         dificuldade.items.addAll("Fácil", "Intermediário", "Difícil")
         dificuldade.value = "Intermediário"
         tamanho.items.addAll(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
@@ -25,21 +25,18 @@ class MenuController {
     }
 
     @FXML
-    fun onHelloButtonClick(event: ActionEvent) {
-        val loader = FXMLLoader(javaClass.getResource("jogo-view.fxml"))
+    fun onJogarClick(event: ActionEvent) {
+        val loader = FXMLLoader(javaClass.getResource("/com/example/batalhanavaljfx/jogo-view.fxml"))
         val root: Parent = loader.load()
-        val tamanho = tamanho.value.toInt()
-        val dificuldade = dificuldade.value.toString()
+        val tam = tamanho.value ?: 10
+        val dif = dificuldade.value ?: "Intermediário"
 
-        val JogoController = loader.getController<JogoController>()
-
-        JogoController.receberDados(tamanho, dificuldade)
-
+        val jogoController = loader.getController<JogoController>()
+        jogoController.receberDados(tam, dif)
 
         val stage = (event.source as Node).scene.window as Stage
         stage.scene = Scene(root)
+        stage.scene.stylesheets.add(javaClass.getResource("/styles.css").toExternalForm())
         stage.show()
     }
 }
-
-
